@@ -1,15 +1,19 @@
 <template>
   <div class="main_app">
-    <h1>Hello {{msg}}</h1>
+      <hr>
+      <div style="display: flex; align-items: center; justify-content: space-between">
+          <div>Header Sticky</div>
+          <el-switch v-model="headerSticky" active-color="#13ce66"/>
+      </div><hr>
   </div>
 </template>
 
 <script>
 export default {
   name: 'popup-view',
-  data () {
+    data () {
     return {
-      msg: 'popup'
+        headerSticky: true,
     }
   }
 }
@@ -18,11 +22,8 @@ export default {
 
 <style>
 .main_app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    height: 300px;
+    width: 350px;
+    background: transparent;
 }
 </style>
