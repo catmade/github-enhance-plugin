@@ -20,9 +20,9 @@ let app = {
     data() {
         return {
             headerSticky: false,
-            headerStickyTag: "config.sticky.header",
+            headerStickyTag: config.headerStickyTag,
             repoHeaderSticky: false,
-            repoHeaderStickyTag: "config.sticky.repo-header",
+            repoHeaderStickyTag: config.repoHeaderStickyTag,
         }
     },
     methods: {
@@ -31,7 +31,6 @@ let app = {
         },
     },
     async created() {
-        console.log("mounted")
         this.headerSticky = await config.get(this.headerStickyTag)
         this.repoHeaderSticky = await config.get(this.repoHeaderStickyTag)
     }
@@ -43,8 +42,9 @@ export default app
 
 <style>
 .main_app {
-    height: 300px;
-    width: 350px;
+    height: 150px;
+    width: 250px;
     background: transparent;
+    margin: 10px 10px 0 10px;
 }
 </style>
