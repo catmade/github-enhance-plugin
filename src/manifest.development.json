@@ -9,6 +9,12 @@
     "permissions": [
         "storage"
     ],
+    "icons": {
+        "16": "logo-x16.png",
+        "32": "logo-x32.png",
+        "48": "logo-x48.png",
+        "128": "logo-x128.png"
+    },
     "action": {
         "default_popup": "popup.html"
     },
