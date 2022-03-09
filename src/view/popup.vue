@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import {config} from "@/entry/background";
+import {config} from "@/entry/common";
 
 let app = {
     name: 'popup-view',

@@ -1,11 +1,11 @@
-import {config} from "@/entry/background";
+import {config} from "@/entry/common";
 
 chrome.storage.sync.get(
     [
         config.repoHeaderStickyTag,
         config.headerStickyTag
     ], function (value) {
-        let headerSticky =value[config.headerStickyTag]
+        let headerSticky = value[config.headerStickyTag]
         let repoHeaderSticky = value[config.repoHeaderStickyTag]
 
         // header
@@ -32,8 +32,6 @@ chrome.storage.sync.get(
 
         if (repoHeaderSticky) {
             rh.style.zIndex = 1000
-            // let crh = getComputedStyle(rh)
-            // let rhHeight = rh.offsetHeight - parseInt(crh.marginBottom)
             rh.classList.add("js-sticky")           // set sticky style
             rh.classList.add("js-position-sticky")  // set sticky style
             if (headerSticky) {
