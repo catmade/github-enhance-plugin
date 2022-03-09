@@ -1,24 +1,21 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "github-enhance",
     "description": "Enhance GitHub experience",
     "version": "0.0.1",
     "background": {
-        "scripts": [
-            "/js/background.js"
-        ],
-        "persistent": false
+        "service_worker": "/js/background.js"
     },
     "permissions": [
         "storage"
     ],
-    "browser_action": {
+    "action": {
         "default_popup": "popup.html"
     },
     "content_scripts": [
         {
             "matches": [
-                "<all_urls>"
+                "*://*.github.com/*"
             ],
             "js": [
                 "/js/content.js"
@@ -26,5 +23,7 @@
         }
     ],
     "options_page": "options.html",
-    "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self';"
+    }
 }
