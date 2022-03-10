@@ -16,7 +16,7 @@ GitHub 增强插件修改了 GitHub 的一些功能来提升浏览体验，目�
 > 由于浏览器的安全限制，无法直接安装第三分插件，需要在“插件管理”中启用”开发人员模式“。  
 > 如果不启用该模式，安装时会报错：`包无效:"CRX_REQUIRED_PROOF_MISSING"`
 
-启用“开发人员模式”后，下载 [release](https://github.com/catmade/github-enhance-plugin/release) 中发布的安装包或者下载源码自己手动编译，然后将文件拖到浏览器中即可安装。
+启用“开发人员模式”后，下载 [release](https://github.com/catmade/github-enhance-plugin/releases) 中发布的安装包或者下载源码自己手动编译，然后将文件拖到浏览器中即可安装。
 
 ## 编译并打包
 
